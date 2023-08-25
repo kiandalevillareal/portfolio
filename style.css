@@ -12,11 +12,6 @@ body{
     color: #e6edf3;
 }
 
-main{
-    display: flex;
-    padding: 2rem 5rem;
-}
-
 /* NAVBAR */
 .navbar{
     display: flex;
@@ -98,6 +93,12 @@ main{
 }
 .navbar-b ul li a i{
     margin-right: .5rem;
+}
+
+
+main{
+    display: flex;
+    padding: 2rem 5rem;
 }
 
 
@@ -289,10 +290,10 @@ main{
 	height: auto;
 	padding: 1rem;
 	background-color: #21262d;
-	border-radius: 8px;
+	border-radius: .5rem;
 	box-shadow: 1px 1px 15px rgba(0, 0, 0, 0.218);
 	position: relative;
-	margin-bottom: 30px;
+	margin-bottom: 2rem;
 	z-index: 99;
 }
 .internship ul li:nth-child(4) {
@@ -300,8 +301,8 @@ main{
 }
 .internship ul li .circle {
 	position: absolute;
-	width: 20px;
-	height: 20px;
+	width: 1.2rem;
+	height: 1.2rem;
 	border-radius: 50%;
 	background-color: #e6edf3;
 	top: 0;
@@ -310,8 +311,8 @@ main{
 }
 .circle::after{
 	content: ' ';
-	width: 12px;
-	height: 12px;
+	width: .8rem;
+	height: .8rem;
 	background-color: #e6edf3;
 	border-radius: 50%;
 }
@@ -326,9 +327,9 @@ ul li:nth-child(even) .circle {
 ul li .date {
 	position: absolute;
 	width: 10rem;
-	height: 33px;
+	height: 2rem;
     background-color: #21262d;
-	border-radius: 15px;
+	border-radius: 1rem;
 	top: -45px;
 	display: grid;
 	place-items: center;
@@ -363,4 +364,145 @@ ul li p {
 	color: #7d8590;
 	line-height: 18px;
     margin: .3rem 0;
+}
+
+
+/* MEDIA QUERY */
+@media (max-width: 1024px){
+    .navbar-t .navbar-r input{
+        width: 15rem;
+    }
+    main{
+        padding: 2rem;
+    }
+    .sidebar .intro{
+        font-size: .6rem;
+    }
+    .sidebar .socials{
+        gap: .5rem;
+    }
+    .sidebar .socials a{
+        font-size: .5rem;
+    }
+    .projects .project p{
+        font-size: .7rem;
+    }
+    .figma .figma-work p{
+        font-size: .7rem;
+    }
+    .internships{
+        padding-top: 4rem;
+    }
+    ul li .heading{
+        font-size: .8rem;
+    }
+    ul li p strong{
+        font-size: .7rem;
+    }
+    ul li p{
+        font-size: .6rem;
+    }
+}
+
+@media (max-width: 768px){
+    main{
+        padding: 1rem;
+    }
+    .navbar .navbar-t .navbar-r{
+        display: none;
+    }
+    .navbar-t{
+        display: flex;
+        justify-content: center;
+    }
+    .navbar-b{
+        display: flex;
+        justify-content: center;
+    }
+    .sidebar{
+        width: 50%;
+    }
+    .sidebar h2{
+        font-size: 1.2rem;
+    }
+    .sidebar .intro{
+        font-size: .7rem;
+    }
+    .sidebar .socials{
+        gap: 1rem;
+    }
+    .sidebar .socials a{
+        font-size: .7rem;
+    }
+    .content{
+        width: 50%;
+    }
+    .projects{
+        display: flex;
+        flex-direction: column;
+    }
+    .figma{
+        display: flex;
+        flex-direction: column;
+    }
+    .internships{
+        display: flex;
+        flex-direction: column;
+        padding-top: 1rem;
+    }
+    .internship {
+        width: 100%;
+    }
+    .internship ul li{
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+    .internship ul::after,
+    .circle::after,
+    ul li:nth-child(even) .circle,
+    ul li:nth-child(odd) .circle,
+    ul li .circle {
+        display: none;
+    }
+    ul li .date{
+        position: static;
+        background-color: #7d8590;
+        height: 1rem;
+        font-size: .6rem;
+        color: #0d1117;
+        width: auto;
+    }
+    .internship ul li:nth-child(even){
+        float: left;
+        transform: none;
+        clear: right;
+    }
+    .internship ul li:nth-child(odd){
+        transform: none;
+    }
+}
+
+@media (max-width: 480px){
+    main{
+        display: flex;
+        flex-direction: column;
+    }
+    .sidebar{
+        width: 100%;
+    }
+    .sidebar .profile{
+        width: 50%;
+        margin: 0 auto;
+    }
+    .sidebar h2{
+        font-size: 1.4rem;
+    }
+    .sidebar .tools{
+        justify-content: space-around;
+    }
+    .content{
+        width: 100%;
+        padding: 1rem;
+    }
+
 }
