@@ -497,12 +497,21 @@ ul li p {
     .sidebar h2{
         font-size: 1.4rem;
     }
+    .sidebar .intro{
+        font-size: .8rem;
+    }
+    .sidebar .socials{
+        gap: 1rem;
+    }
+    .sidebar .socials a{
+        font-size: .8rem;
+    }
     .sidebar .tools{
         justify-content: space-around;
     }
     .content{
         width: 100%;
-        padding: 1rem;
+        padding: 1rem 0;
     }
 
 }
