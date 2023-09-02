@@ -309,6 +309,14 @@ main{
 	display: grid;
 	place-items: center;
 }
+.internship ul li a{
+    text-decoration: none;
+    color: #e6edf3;
+    font-size: small;
+}
+.internship ul li a:hover{
+    text-decoration: underline;
+}
 .circle::after{
 	content: ' ';
 	width: .8rem;
